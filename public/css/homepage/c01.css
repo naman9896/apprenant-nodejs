@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ededed;
+  --secondary-color: #fff;
+}
+.dark-theme {
+  --primary-color: #000106;
+  --secondary-color: #fff;
+}
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+body {
+  background: var(--primary-color) !important;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.form-control-dark {
+  color: var(--secondary-color);
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  color: var(--secondary-color);
+  background-color: var(--bs-dark);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+.bg-p {
+  background: #8540f5;
+}
+.box {
+  padding: 90px 10px 20px;
+}
+
+.loginSignupbtn {
+  background-color: white;
+  color: rgb(161, 135, 161);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  border-radius: 50px;
+}
+
+.logo {
+  margin-left: 10px;
+  height: 5vh;
+}
+
+.carousel-img {
+  height: 200px;
+  width: 220px;
+  z-index: -1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.final-nav {
+  background-color: #8540f5;
+}
+
+.profile-dropdown {
+  font-size: 1.5rem;
+}
+
+.m-custom {
+  margin-right: 300px;
+}
+
+.img-gradient {
+  position: relative;
+}
+
+.img-gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.community-abt {
+  color: var(--secondary-color) !important;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 90px;
+  font-family: "Fira Sans", sans-serif;
+  z-index: 2;
+}
+
+.community-des {
+  color: var(--secondary-color) !important;
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 135px;
+  font-family: "Fira Sans", sans-serif;
+  z-index: 2;
+}
+
+.content-heading {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.536);
+}
+
+.post-container {
+  background: var(--secondary-color);
+}
+
+.post-border {
+  border: 1px solid rgb(62, 62, 62);
+}
+
+.nav-dropdown-custom {
+  font-size: 1.1rem;
+}
+
+ul .dropdown-left-manual {
+  right: 0;
+  left: auto;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+li .d-color {
+  color: var(--secondary-color) !important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 18px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-main {
+  display: inline;
+  padding-top: 2px;
+  margin-left: 10px;
+}
+
+.btn-publish {
+  background-color: #8540f5;
+  border: none;
+  border-radius: 5px;
+  color: var(--secondary-color);
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn-publish:hover {
+  background-color: #995ef9;
+  color: var(--secondary-color);
+}
+
+.community-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.community-card-img {
+  object-fit: cover;
+}
+
+.community-card {
+  text-decoration: none;
+  color: rgb(83, 83, 83);
+}
+
+.community-card:hover {
+  color: #000;
+}

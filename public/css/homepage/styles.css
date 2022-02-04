@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+
+body {
+  background: #8540f5;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+.card-img-left {
+  width: 45%;
+  /* Link to your background image using in the property below! */
+  background: scroll center url("/images/books.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signup {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  color: rgb(45, 91, 216);
+}
+
+.btn-login:hover {
+  background-color: #8540f5;
+  border: 1px solid#8540f5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  font-size: 2.5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.social-img {
+  margin-right: 4px;
+  height: 20px;
+  width: 20px;
+}
+
+.btn-social {
+  padding: 0.75rem;
+  color: rgb(45, 91, 216);
+  background-color: #fff;
+  border: 1px solid rgb(45, 91, 216);
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.btn-social:hover {
+  color: #fff;
+  background-color: #8540f5;
+  border: 1px solid#8540f5;
+}
+
+.account-login {
+  margin-left: 4px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.social-logo {
+  display: inline;
+  height: 45px;
+  width: 30px;
+}
+
+.card-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}

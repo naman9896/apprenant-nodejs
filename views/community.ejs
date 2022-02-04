@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community</title>
+    <link rel="stylesheet" href="/css/homepage/timelineProfile.css" />
+    <link rel="stylesheet" href="/css/homepage/newProfile.css" />
+    <link rel="stylesheet" href="/css/homepage/styles.css" />
+    <link rel="stylesheet" href="/css/homepage/c01.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    /> -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/a6a7deb1e6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar logged in -->
+    <% if(logged) { %>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark final-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/profile">
+          <img
+            src="/logo/Apprenant-Logo-t.png"
+            alt=""
+            width="130"
+            height="40"
+            class="d-inline-block align-text-top ps-3"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul
+            class="navbar-nav dropdown-menu-end dropdown-menu-lg-start ms-auto"
+          >
+            <li class="nav-item m-custom">
+              <div class="justify-content-center">
+                <form class="d-flex my-lg-0 my-lg-0 py-1">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Search"
+                    style="width: 35vw"
+                  />
+
+                  <button class="btn btn-outline-light ms-2" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link d-color" href="#">
+                <!-- Notification -->
+                <i class="far fa-bell nav-dropdown-custom"></i>
+              </a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link d-color" href="/compose">
+                <!-- Post Create -->
+                <i class="fas fa-plus nav-dropdown-custom"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown profile-dropdown">
+              <a
+                class="nav-link dropdown-toggle nav-dropdown-custom d-color"
+                href="#"
+                id="navbarDarkDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="far fa-user-circle nav-dropdown-custom"></i>
+                <%= username %>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-left-manual"
+                aria-labelledby="navbarDarkDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="/user/profile">Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Create a Community</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                <li>
+                  <a class="dropdown-item" href="/logout">Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <% } else { %>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark final-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/logo/Apprenant-Logo-t.png"
+            alt=""
+            width="130"
+            height="40"
+            class="d-inline-block align-text-top ps-3"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item" style="margin-right: 200px">
+              <div class="justify-content-center">
+                <form class="d-flex my-lg-0 my-lg-0 py-1">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Search"
+                    style="width: 35vw"
+                  />
+
+                  <button class="btn btn-outline-light ms-2" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <% if(logged){ %>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <% }else{ %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="/signup">Signup</a>
+            </li>
+            <li class="nav-item dropdown profile-dropdown nav-custom">
+              <a
+                class="nav-link dropdown-toggle nav-dropdown-custom d-color"
+                href="#"
+                id="navbarDarkDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="far fa-user nav-dropdown-custom"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-left-manual"
+                role="menu"
+                aria-labelledby="navbarDarkDropdownMenuLink"
+              >
+                <li>
+                  <span class="dropdown-item"
+                    >Night Mode
+                    <div class="switch-main">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </span>
+                </li>
+                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                <li>
+                  <a class="dropdown-item" href="/login">Log In/Sign Up</a>
+                </li>
+              </ul>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <% } %>
+    <div class="container" style="max-width: 1200px">
+      <div class="row">
+        <!-- PROFILE -->
+        <div class="col-sm-12 col-md-12" style="position: relative">
+          <div class="upper-banner"></div>
+
+          <div class="col-md-12 lower-banner">
+            <div class="col-sm-10">
+              <img
+                src="/uploads/<%= community.image %>"
+                class="community-thumbnail profile-picture"
+                alt="profile picture"
+                height="190px"
+                width="190px"
+              />
+              <div class="user-display">
+                <div class="user-data">
+                  <span class="username"><%= community.name %></span>
+                </div>
+                <div class="user-info"><%= community.about %></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-container">
+            <a href="#" class="text-decoration-none switch-tab-link"
+              >Timeline</a
+            >
+
+            <a href="#" class="text-decoration-none switch-tab-link mx-4">
+              About</a
+            >
+          </div>
+        </div>
+        <div class="row mt-5">
+          <!-- posts -->
+          <div class="col-md-8">
+            <h5 class="content-heading mb-4">Posts</h5>
+            <div class="panel blog-container">
+              <div class="panel-body p-4">
+                <div class="post-body-content text-lg-justify">
+                  <h4>Post 1</h4>
+                  <small class="text-muted"
+                    >By
+                    <a class="user-w-posted" href="#"
+                      ><strong> John Doe</strong></a
+                    >
+                    | Post on Aug 18, 2021</small
+                  >
+
+                  <p class="m-top-sm m-bottom-sm text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam eros nibh, viverra a dui a, gravida varius velit.
+                    Nunc vel tempor nisi. Aenean id pellentesque mi, non
+                    placerat mi. Integer luctus accumsan tellus. Vivamus quis
+                    elit sit amet nibh lacinia suscipit eu quis purus. Vivamus
+                    tristique est non ipsum dapibus lacinia sed nec metus.
+                  </p>
+                </div>
+                <div class="image-wrapper">
+                  <a
+                    class="image-wrapper image-zoom cboxElement text-decoration-none"
+                    href="#"
+                  >
+                    <img
+                      src="/images/img16.jpg"
+                      alt="Photo of Blog"
+                      height="500px"
+                    />
+                    <div class="image-overlay"></div>
+                  </a>
+                </div>
+                <!-- <a href="single_post.html"
+                ><i class="fa fa-angle-double-right"></i> Continue reading</a
+              > -->
+                <span
+                  class="post-like text-muted tooltip-test"
+                  data-toggle="tooltip"
+                  data-original-title="I like this post!"
+                >
+                  <i class="fa fa-heart"></i> <span class="like-count">25</span>
+                </span>
+              </div>
+            </div>
+            <div class="panel blog-container mt-5">
+              <div class="panel-body p-4">
+                <h4>Post 2</h4>
+                <small class="text-muted"
+                  >By
+                  <a class="user-w-posted" href="#"
+                    ><strong> John Doe</strong></a
+                  >
+                  | Post on Aug 8, 2021</small
+                >
+
+                <p class="m-top-sm m-bottom-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam eros nibh, viverra a dui a, gravida varius velit. Nunc
+                  vel tempor nisi. Aenean id pellentesque mi, non placerat mi.
+                  Integer luctus accumsan tellus. Vivamus quis elit sit amet
+                  nibh lacinia suscipit eu quis purus. Vivamus tristique est non
+                  ipsum dapibus lacinia sed nec metus.
+                </p>
+                <div class="image-wrapper">
+                  <a class="image-wrapper image-zoom cboxElement" href="#">
+                    <img
+                      src="/images/img15.jpg"
+                      alt="Photo of Blog"
+                      height="500px"
+                    />
+                    <div class="image-overlay"></div>
+                  </a>
+                </div>
+                <span
+                  class="post-like text-muted tooltip-test"
+                  data-toggle="tooltip"
+                  data-original-title="I like this post!"
+                >
+                  <i class="fa fa-heart"></i> <span class="like-count">25</span>
+                </span>
+                <!-- <a href="single_post.html"
+                ><i class="fa fa-angle-double-right"></i> Continue reading</a
+              > -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <h4 class="headline text-muted">
+            TRENDING TODAY
+            <span class="line"></span>
+          </h4> -->
+          <div class="col-md-4">
+            <div class="trending-post">
+              <h5 class="content-heading mb-4">Trending today</h5>
+              <ul class="list-group">
+                <li class="list-group-item trending-list mb-1">
+                  <div class="d-flex position-relative">
+                    <img
+                      src="/images/img14.jpg"
+                      class="flex-shrink-0 me-3"
+                      alt=""
+                      height="60px"
+                      width="60px"
+                    />
+                    <div>
+                      <p>Best $10 accessories for Apple's Airpods</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item trending-list my-1">
+                  <div class="d-flex position-relative">
+                    <img
+                      src="/images/img15.jpg"
+                      class="flex-shrink-0 me-3"
+                      alt=""
+                      height="60px"
+                      width="60px"
+                    />
+                    <div>
+                      <p>How to Become a Web Developer in 2021</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item trending-list my-1">
+                  <div class="d-flex position-relative">
+                    <img
+                      src="/images/img16.jpg"
+                      class="flex-shrink-0 me-3"
+                      alt=""
+                      height="60px"
+                      width="60px"
+                    />
+                    <div>
+                      <p>Is target Display Mode not supported by new iMacs</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item trending-list my-1">
+                  <div class="d-flex position-relative">
+                    <img
+                      src="/images/img17.jpg"
+                      class="flex-shrink-0 me-3"
+                      alt=""
+                      height="60px"
+                      width="60px"
+                    />
+                    <div>
+                      <p>
+                        Afghanistan: Where will refugees go after Taliban
+                        takeover?
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item trending-list my-1">
+                  <div class="d-flex position-relative">
+                    <img
+                      src="/images/img18.jpg"
+                      class="flex-shrink-0 me-3"
+                      alt=""
+                      height="60px"
+                      width="60px"
+                    />
+                    <div>
+                      <p>Is it safe for my child to get a COVID-19 vaccine?</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item trending-list my-1">
+                  <div class="d-flex position-relative">
+                    <img
+                      src="/images/books.jpg"
+                      class="flex-shrink-0 me-3"
+                      alt=""
+                      height="60px"
+                      width="60px"
+                    />
+                    <div>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let text = "";
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

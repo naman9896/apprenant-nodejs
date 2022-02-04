@@ -1,0 +1,41 @@
+{
+  "name": "authentications",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "16.10.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "dompurify": "^2.3.4",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jsdom": "^19.0.0",
+    "memorystore": "^1.6.6",
+    "mongoose": "^5.13.8",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.6.5",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "string-strip-html": "^9.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

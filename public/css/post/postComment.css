@@ -1,0 +1,105 @@
+ul li {
+  list-style: none;
+}
+
+.post-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+}
+.post-footer .input-group-addon a {
+  color: #454545;
+}
+.post-footer .comments-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post-footer .comments-list .comment .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post-footer .comments-list .comment .comment-heading .user {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post-footer .comments-list .comment .comment-heading .time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}
+.comment-reply {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: block;
+}
+.comment-content {
+  margin-bottom: 6px;
+}
+
+div a {
+  text-decoration: none;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+  color: #bbb;
+  /* left: 940px; */
+}
+
+.dropbtn1 {
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+.post-title {
+  display: inline;
+}
+.text-muted {
+  display: block;
+}
